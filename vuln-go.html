@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Golang Web Vulnerability Playground</title>
+</head>
+<body>
+
+<h1>Golang Web Vulnerability Playground</h1>
+
+<ul>
+	<li><a href="/path-traversal?file=index.html">Path Traversal</a></li>
+	<li><a href="/rce?name=world">RCE</a></li>
+	<li><a href="/sqli?username=admin">SQL Injection</a></li>
+	<li><a href="/xss?name=world">XSS</a></li>
+	<li><a href="/redirect?url=http://127.0.0.1">Redirect</a></li>
+	<li><a href="/ssti?content=Hello,%20world!">Server-side Template Injection</a></li>
+	<li><a href="/ssrf?url=http://localhost:8080/path-traversal?file=https://127.0.0.1">Server-side Request Forgery</a></li>
+</ul>
+
+<p>This is a web vulnerability playground written in Golang. Each link corresponds to a specific vulnerability. Clicking on the link will trigger the vulnerability and show the results. The payload that triggers each vulnerability is provided in the comments of the Golang code.</p>
+
+</body>
+</html>

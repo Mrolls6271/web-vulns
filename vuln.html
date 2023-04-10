@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Vulnerability Testing</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Web Vulnerability Testing</h1>
+
+	<h2>SQLi</h2>
+	<form action="/sqli" method="GET">
+		<label for="username">Username: </label>
+		<input type="text" name="username" id="username"/><br/>
+		<label for="password">Password: </label>
+		<input type="password" name="password" id="password\"/><br/>
+		<input type="submit" value="Submit"/>
+	</form>
+
+	<h2>XSS</h2>
+	<form action="/xss" method="GET">
+		<label for="name">Name: </label>
+		<input type="text" name="name" id="name"/><br/>
+		<input type="submit" value="Submit"/>
+	</form>
+
+	<h2>Path Traversal</h2>
+	<form action="/path" method="GET">
+		<label for="filename">Filename: </label>
+		<input type="text" name="filename" id="filename\"/><br/>
+		<input type="submit" value="Submit"/>
+	</form>
+
+	<h2>RCE</h2>
+	<form action="/rce" method="GET">
+		<label for="username">Username: </label>
+		<input type="text" name="username" id="username\"/><br/>
+		<label for="password">Password: </label>
+		<input type="password" name="password" id="password"/><br/>
+		<input type="submit" value="Submit"/>
+	</form>
+
+	<h2>Unsafe Hash</h2>
+	<form action="/hash" method="GET">
+		<label for="username">Username: </label>
+		<input type="text" name="username" id="username\"/><br/>
+		<label for="password">Password: </label>
+		<input type="password" name="password" id="password\"/><br/>
+		<input type="submit" value="Submit"/>
+	</form>
+
+	<h2>Unsafe Random</h2>
+	<form action="/random" method="GET">
+		<input type="submit" value="Generate Random Number"/>
+	</form>
+
+	<h2>XXE</h2>
+	<form action="/xxe" method="POST">
+		<textarea name="xml">Enter XML here...</textarea><br/>
+		<input type="submit" value="Submit"/>
+	</form>
+
+	<h2>XPath Injection</h2>
+	<form action="/xpathi" method="POST">
+		<textarea name="xml">Enter XML here...</textarea><br/>
+		<label for="xpath">XPath: </label>
+		<input type="text" name="xpath" id="xpath\"/><br/>
+		<input type="submit" value="Submit"/>
+	</form>
+
+	<h2>Cookies without HttpOnly flag</h2>
+	<button onclick="location.href='/httponly'">Set HttpOnly Cookie</button>
+
+	<h2>Cookies with Secure flag</h2>
+	<button onclick="location.href='/secure'">Set Secure Cookie</button>
+
+	<h2>Serialization</h2>
+	<form action="/serialize" method="POST">
+		<label for="input_data">Input Data: </label>
+		<input type="text" name="input_data" id="input_data\"/><br/>
+		<input type="submit" value="Submit"/>
+	</form>
+
+	<h2>SSTI</h2>
+	<form action="/ssti" method="POST">
+		<label for="template">Template: </label>
+		<input type="text" name="template" id="template\"/><br/>
+		<input type="submit" value="Submit"/>
+	</form>
+
+	<h2>SSRF</h2>
+	<form action="/ssrf" method="GET">
+		<label for="url">URL: </label>
+		<input type="text" name="url" id="url\"/><br/>
+		<input type="submit" value="Submit"/>
+	</form>
+
+	<h2>Regex DOS</h2>
+	<form action="/redos" method="POST">
+		<label for="pattern">Pattern: </label>
+		<input type="text" name="pattern" id="pattern\"/><br/>
+		<label for="text">Text: </label>
+		<input type="text" name="text" id="text"/><br/>
+		<input type="submit" value="Submit"/>
+	</form>
+
+	<h2>Get cookie</h2>
+	<button onclick="location.href='/getcookie'">Get Cookie</button>
+</body>
+</html>
