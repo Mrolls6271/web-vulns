@@ -9,9 +9,6 @@ import pickle
 import requests
 import re
 
-# Is an web service in Flask, can be vulnerable to various types of attacks such as RCE? if can, please give me a code example.
-# regex DoS, RCE, path traversal, XSS, SQLi, unsafe hash, unsafe random, XXE, Xpathi, cookies without HttpOnly flag, cookies with Secure flag, serialization, SSRF, SSTI
-
 app = Flask(__name__)
 
 users = {}
